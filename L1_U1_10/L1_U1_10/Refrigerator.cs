@@ -1,5 +1,8 @@
 ﻿namespace L1_U1_10
 {
+    /// <summary>
+    /// Klasė skirta aprašyti duomenys apie šaldytuvus
+    /// </summary>
     class Refrigerator
     {
         public string Manufacturer { get; set; }
@@ -14,16 +17,22 @@
         public int Width { get; set; }
         public int Depth { get; set; }
 
+        /// <summary>
+        /// Konvertuoja šaldytuvų objektą į suformatuotą simbolių eilutę
+        /// </summary>
+        /// <returns> Suformatuotą simbolių eilutę</returns>
         public override string ToString()
         {
-            return $"Gamintojas:{Manufacturer}| Modelis:{Model}| Talpa:{Capacity}| Energijos klasė:{EnergyLabel}| Montavimo tipas:{InstallationType}|"
-        +
-            $"Spalva:{Color}| Požymis:{(IsThereAFreezer ? "Yra" : "Nera")}| Kaina:{Price}| Aukštis:{Height}| Plotis:{Width}| Gylis:{Depth}| ";
+            return $" {Manufacturer},{Model},{Capacity},{EnergyLabel},{InstallationType},{Color},{IsThereAFreezer},{Price},{Height},{Width},{Depth}";
         }
 
+        /// <summary>
+        /// Trumpas aprašymas
+        /// </summary>
+        /// <returns>Trumpą parašymą</returns>
         public string PrintShortDescription()
         {
-            return $"Gamintojas: {Manufacturer}| Modelis:{Model}| Talpa:{Capacity}| Kaina:{Price}|";
+            return $"Gamintojas: {Manufacturer} | Modelis:{Model} | Talpa:{Capacity} | Kaina:{Price}|";
         }
     }
 }
